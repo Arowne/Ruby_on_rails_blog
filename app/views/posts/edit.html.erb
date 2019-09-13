@@ -1,0 +1,23 @@
+<div class="container">
+    <h1 class="mb-5">EDITION</h1>
+
+    <%= form_for @post do |f| %>
+
+        <div class="form-group mb-5">
+            <div class="form-group">
+                <h4>TITLE</h4>
+                <%= f.text_field :title , class:"form-control h5" %>
+            </div>
+        </div>
+
+        <div class="form-group mt-5">
+            <div class="form-group">
+                <h4>CONTENT</h4>
+                <%= f.text_area :content , class:"form-control h5", cols: "30", rows: "20" %>
+            </div>
+        </div>
+
+        <%= f.button :submit, class:"btn btn-primary mt-5" %>
+
+    <% end %>
+</div>

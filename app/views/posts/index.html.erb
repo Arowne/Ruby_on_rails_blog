@@ -1,0 +1,21 @@
+
+<div class="text-center">
+    <h1> LATEST POST </h1>
+</div>
+<div class="col-lg-8 col-md-10 mx-auto">
+    <% @posts.each do |post| %>
+        <div class="post-preview">
+            <a href="post.html">
+                <h2 class="post-title">
+                    <h2> <%= link_to post.title, post %> </h2>
+                </h2>
+                <h3 class="post-subtitle font-weight-light">
+                    <p> <%= post.content.slice(0..20)  %>  ...</p>
+                </h3>
+                <p class="post-meta text-right"> <%= post.created_at.to_date %> </p>
+
+            </a>
+        </div>
+        <hr>
+    <% end %>
+</div>
